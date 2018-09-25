@@ -6,6 +6,9 @@
 
 
 		<title> Indicadores lactancia materna para el año 2010</title>	
+		 <!-- Bootstrap core CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
 	</head>
 	<body>
 		<style src="CSS/styles.css">
@@ -16,44 +19,49 @@
 			</div>	
 
 			<div class = "analysys-text">
-				<h3> Contexto: Resultados indicadores en Lactancia Materna - ENIN2010 </h3>
+				<h3> Contexto: Resultados para los indicadores en Lactancia Materna - ENSIN2010 </h3>
 				<p class = "lead"> A nivel de nutrición en pediatría la primera garantía de una buena salud de los niños que va a definir su salud de adultos es una adecuada lactancia materna, la cual se recomienda sea exclusiva durante los primeros 6 meses y durar hasta el primer año o segundo año de edad. Para el año 2010 en Colombia el 42,8% de los niños recibieron lactancia materna exclusiva los primeros 6 meses, mientras el 58,1% de los niños colombianos recibieron lactancia materna más allá del primer año de edad (<a href="https://www.icbf.gov.co/bienestar/nutricion/encuesta-nacional-situacion-nutricional">ENSIN</a>, 2010). </p>
 
 				<p class = "lead"> De forma independiente se encuentran los <a href = "https://www.datos.gov.co/Salud-y-Protecci-n-Social/Salud-Datos/5kgh-si6m">datos disponibles</a> sobre tres indicadores clave en salud pública para la evaluación de la lactancia materna del país </p> 
 
 				<ul>
 					<p>1. La duración total de la lactancia materna (meses) </p>
-					<p>2. la duración mediana de la lactancia materna </p>
-					<p>3. Porcentaje de capacítación de las madres en lactancia materna antes del parto </p>
+					<p>2. la duración mediana de la lactancia materna (meses) </p>
+					<p>3. Porcentaje de capacítación de las madres en lactancia materna antes del parto (%) </p>
 				</ul>
+
+				<p class = "lead"> A continuación se puede observar el comportamiento de cada uno de los indicadores para los diferentes departamentos de Colombia </p>
+
 			</div>
 		</div>
 
+		<div class = "container">
+			<b style="font-size:11px;">Seleccione el indicador</b>
+			<div class="row"> 
 
-		<b style="font-size:11px;">Seleccione el indicador</b>
-		<div class="row"> 
+				<div class ="column">
+				<!--Creating a Combobox for my 3 indicators -->
+				<select id="category">
+				  <option value="1">Duración total de LM</option>
+				  <option value="2">Mediana de la duración LM</option>
+				  <option value="3">Porcentaje capacitación de madres en LM</option>
+				</select> 
+				</div>
 
-			<div class ="column">
-			<!--Creating a Combobox for my 3 indicators -->
-			<select id="category">
-			  <option value="1">Duración total de LM</option>
-			  <option value="2">Mediana de la duración LM</option>
-			  <option value="3">Porcentaje capacitación de madres en LM</option>
-			</select> 
+				<div class="column">
+				<!-- Sort dimension -->
+					<span class="sortCheck">Sort Values
+					  <input type="checkbox" id="myCheckbox">
+					</span>	
+				</div>
 			</div>
-
-			<div class="column">
-			<!-- Sort dimension -->
-				<span class="sortCheck">Sort Values
-				  <input type="checkbox" id="myCheckbox">
-				</span>	
-			</div>
-
-		</div>
 		<!-- Creating space for my canvas-->
-		<div id="barPlot"></div>
-		<script src="http://d3js.org/d3.v5.min.js"></script>
-		<script src="js/simpleBarPlot.js"> </script>	
+			<div id="barPlot"></div>
+			<script src="https://d3js.org/d3.v5.min.js"></script>
+			<script src="js/simpleBarPlot.js"> </script>	
+		</div>
 
-	</body>
+
+
+			</body>
 </html>
