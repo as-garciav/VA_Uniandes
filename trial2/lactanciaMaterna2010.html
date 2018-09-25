@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Indicadores lactancia materna para el año 2010</title>	
+	</head>
+	<body>
+		<style src="CSS/styles.css">
+		</style>
+
+		<h1> La lactancia materna es importante </h1>
+
+		<b style="font-size:11px;">Seleccione el indicador</b>
+		<div class="row"> 
+
+			<div class ="column">
+			<!--Creating a Combobox for my 3 indicators -->
+			<select id="category">
+			  <option value="1">Duración total de LM</option>
+			  <option value="2">Mediana de la duración LM</option>
+			  <option value="3">Porcentaje capacitación de madres en LM</option>
+			</select> 
+			</div>
+
+			<div class="column">
+			<!-- Sort dimension -->
+			<span class="sortCheck">Sort Values
+			  <input type="checkbox" id="myCheckbox">
+			</span>	
+			</div>
+
+		</div>
+		<!-- Creating space for my canvas-->
+		<div id="barPlot"></div>
+		<script src="http://d3js.org/d3.v5.min.js"></script>
+		<script src="js/simpleBarPlot.js"> </script>	
+
+
+	</body>
+</html>
